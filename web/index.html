@@ -10,7 +10,21 @@ and open the template in the editor.
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
-    <body>
-        <div>TODO write content</div>
-    </body>
+    
+        <div>Form</div>
+        <form action="GreetingServlet" method="POST"> 
+            <table>
+                <tr>
+                    <td>First Name:</td>
+                    <td><input type="text" name="firstName" size="20"></td>
+                </tr>
+                <tr>
+                    <td>Last Name:</td>
+                    <td><input type="text" name="lastName" size="20"></td>
+                </tr>
+                <button type="submit">Submit</button>
+            </table>
+        </form>
+       
+    
 </html>
