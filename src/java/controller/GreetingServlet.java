@@ -32,6 +32,11 @@ public class GreetingServlet extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
+        
+        String fName = request.getParameter("firstName");
+        String lName = request.getParameter("lastName");
+       
+        
         try (PrintWriter out = response.getWriter()) {
             /* TODO output your page here. You may use following sample code. */
             out.println("<!DOCTYPE html>");
@@ -40,7 +45,7 @@ public class GreetingServlet extends HttpServlet {
             out.println("<title>Servlet GreetingServlet</title>");            
             out.println("</head>");
             out.println("<body>");
-            out.println("<h1>Servlet GreetingServlet at " + request.getContextPath() + "</h1>");
+            out.println("<h1>Good morning " + fName + " " + lName + "." + "</h1>");
             out.println("</body>");
             out.println("</html>");
         }
